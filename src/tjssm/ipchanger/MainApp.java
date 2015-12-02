@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import tjssm.ipchanger.model.IpAddress;
+import tjssm.ipchanger.view.IpAddressOverviewController;
 
 
 /**
@@ -21,9 +22,16 @@ public class MainApp extends Application {
 	private Stage primaryStage;
 	private AnchorPane rootLayout;
 
-	private ObservableList<IpAddress> ipAddress = 
+	private ObservableList<IpAddress> ipAddressData = 
 			FXCollections.observableArrayList(); 
 		
+	public MainApp(){
+    	// Add some sample data
+    	ipAddressData.add(new IpAddress("학교"));
+    	ipAddressData.add(new IpAddress("멤버십"));
+    	ipAddressData.add(new IpAddress("독서실"));
+    }
+	
 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
@@ -47,6 +55,10 @@ public class MainApp extends Application {
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			
+			IpAddressOverviewController controller = loader.getController();
+			controller.setMainApp(this);
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -60,17 +72,16 @@ public class MainApp extends Application {
     public Stage getPrimaryStage() {
         return primaryStage;
     }
-    
-    
+        
     /**
      * Returns the data as an observable list of IpAddress
      *  
      * @return ObservableList
      */
     public ObservableList<IpAddress> getIpAddressData(){
-    	return ipAddress;
+    	return ipAddressData;
     }
-    
+         
 	public static void main(String[] args) {
 		launch(args);
 	}

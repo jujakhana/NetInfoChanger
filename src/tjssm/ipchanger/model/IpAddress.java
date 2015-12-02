@@ -22,32 +22,43 @@ public class IpAddress {
 	 * Default constructor
 	 */
 	public IpAddress(){
-		this(null,null,null);
+		this(null);
 	}
 	
-	public IpAddress(String ipAddress, String subnetMask, String gateway)
-	{
-		this.place = new SimpleStringProperty();
+	/**
+	 * Constructor with some initial data.
+	 * 
+	 * @param place
+	 */
+	public IpAddress(String place){
+		this.place = new SimpleStringProperty(place);
 		
-		this.ipAddress = new SimpleStringProperty(ipAddress);
-		this.subnetMask = new SimpleStringProperty(subnetMask);
-		this.gateway = new SimpleStringProperty(gateway);
-		
+		this.ipAddress = new SimpleStringProperty("0.0.0.0");
+		this.subnetMask = new SimpleStringProperty("0.0.0.0");
+		this.gateway = new SimpleStringProperty("0.0.0.0");
 		this.basicDNS = new SimpleStringProperty("8.8.8.8");
-		this.subDNS = new SimpleStringProperty(" ");
+		this.subDNS = new SimpleStringProperty("0.0.0.0");
 	}
 	
 	public String getPlace(){
 		return place.get();
 	}
 	
+	public void setPlace(String place)
+	{
+		this.place.set(place);
+	}
+	
 	public StringProperty placeProperty(){
 		return place;
 	}
-	
-	
+		
 	public String getIpAddress(){
 		return ipAddress.get();
+	}
+	
+	public void setIpAddress(String ipAddress){
+		this.ipAddress.set(ipAddress);
 	}
 	
 	public StringProperty ipAddressProperty(){
@@ -58,12 +69,20 @@ public class IpAddress {
 		return subnetMask.get();
 	}
 	
+	public void setSubnetMask(String subnetMask){
+		this.subnetMask.set(subnetMask);
+	}
+	
 	public StringProperty subnetMaskProperty(){
 		return subnetMask;
 	}
 	
 	public String getGateway(){
 		return gateway.get();
+	}
+	
+	public void setGateway(String gateway){
+		this.gateway.set(gateway);
 	}
 	
 	public StringProperty gatewayProperty(){
@@ -74,12 +93,20 @@ public class IpAddress {
 		return basicDNS.get();
 	}
 	
+	public void setBasicDNS(String basicDNS){
+		this.basicDNS.set(basicDNS);
+	}
+	
 	public StringProperty basicDNSProperty(){
 		return basicDNS;
 	}
 	
 	public String getSubDNS(){
 		return subDNS.get();
+	}
+	
+	public void setSubDNS(String subDNS){
+		this.subDNS.set(subDNS);
 	}
 	
 	public StringProperty subDNSProperty(){

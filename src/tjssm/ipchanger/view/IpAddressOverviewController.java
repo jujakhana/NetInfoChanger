@@ -1,4 +1,4 @@
-package tjssm.ipchanger.controller;
+package tjssm.ipchanger.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -13,7 +13,10 @@ public class IpAddressOverviewController {
 	private TableView<IpAddress> ipAddressTable;
 	
 	@FXML
-	private TableColumn<IpAddress, String> place;
+	private TableColumn<IpAddress, String> placeColumn;
+	
+	@FXML
+	private Label placeLabel;
 	
 	@FXML
 	private Label ipAddressLabel;
@@ -32,8 +35,7 @@ public class IpAddressOverviewController {
 	
 	//Reference to the main application
 	private MainApp mainApp;
-	
-	
+		
 	/**
 	 * The constructor.
 	 * The constructor is called before the initialize() method.
@@ -46,7 +48,7 @@ public class IpAddressOverviewController {
 	 */
 	@FXML
 	private void initialize(){
-		place.setCellValueFactory(cellData -> cellData.getValue().placeProperty());
+		placeColumn.setCellValueFactory(cellData -> cellData.getValue().placeProperty());
 	}
 	
 	/**
@@ -54,7 +56,6 @@ public class IpAddressOverviewController {
 	 * 
 	 * @param mainApp
 	 */
-	
 	public void setMainApp(MainApp mainApp)
 	{
 		this.mainApp = mainApp;
@@ -64,8 +65,4 @@ public class IpAddressOverviewController {
 	
 	
 }
-
-
-
-
 
