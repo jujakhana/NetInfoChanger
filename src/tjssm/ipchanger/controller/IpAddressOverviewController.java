@@ -1,4 +1,4 @@
-package tjssm.ipchanger.view;
+package tjssm.ipchanger.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -6,6 +6,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import tjssm.ipchanger.MainApp;
 import tjssm.ipchanger.model.IpAddress;
+import tjssm.ipchanger.view.*;
 
 public class IpAddressOverviewController {
 

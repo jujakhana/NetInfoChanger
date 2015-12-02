@@ -9,8 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import tjssm.ipchanger.controller.IpAddressOverviewController;
 import tjssm.ipchanger.model.IpAddress;
-import tjssm.ipchanger.view.IpAddressOverviewController;
 
 
 /**
@@ -27,9 +27,6 @@ public class MainApp extends Application {
 		
 	public MainApp(){
     	// Add some sample data
-    	ipAddressData.add(new IpAddress("학교"));
-    	ipAddressData.add(new IpAddress("멤버십"));
-    	ipAddressData.add(new IpAddress("독서실"));
     }
 	
 	@Override
