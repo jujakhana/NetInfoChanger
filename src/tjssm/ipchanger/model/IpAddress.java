@@ -10,6 +10,7 @@ import javafx.beans.property.StringProperty;
  *
  */
 public class IpAddress {
+	private final StringProperty place;
 	private final StringProperty ipAddress;
 	private final StringProperty subnetMask;
 	private final StringProperty gateway;
@@ -26,6 +27,8 @@ public class IpAddress {
 	
 	public IpAddress(String ipAddress, String subnetMask, String gateway)
 	{
+		this.place = new SimpleStringProperty();
+		
 		this.ipAddress = new SimpleStringProperty(ipAddress);
 		this.subnetMask = new SimpleStringProperty(subnetMask);
 		this.gateway = new SimpleStringProperty(gateway);
@@ -33,6 +36,15 @@ public class IpAddress {
 		this.basicDNS = new SimpleStringProperty("8.8.8.8");
 		this.subDNS = new SimpleStringProperty(" ");
 	}
+	
+	public String getPlace(){
+		return place.get();
+	}
+	
+	public StringProperty placeProperty(){
+		return place;
+	}
+	
 	
 	public String getIpAddress(){
 		return ipAddress.get();

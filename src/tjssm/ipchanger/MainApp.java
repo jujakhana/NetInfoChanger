@@ -67,7 +67,7 @@ public class MainApp extends Application {
      *  
      * @return ObservableList
      */
-    public ObservableList<IpAddress> getIpAddressDate(){
+    public ObservableList<IpAddress> getIpAddressData(){
     	return ipAddress;
     }
     
