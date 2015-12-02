@@ -10,14 +10,14 @@ import javafx.beans.property.StringProperty;
  *
  */
 public class IpAddress {
+	
 	private final StringProperty place;
 	private final StringProperty ipAddress;
 	private final StringProperty subnetMask;
 	private final StringProperty gateway;
 	private final StringProperty basicDNS;
 	private final StringProperty subDNS;
-	
-	
+		
 	/**
 	 * Default constructor
 	 */
