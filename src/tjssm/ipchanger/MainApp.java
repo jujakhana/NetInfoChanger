@@ -3,10 +3,13 @@ package tjssm.ipchanger;
 import java.io.IOException;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import tjssm.ipchanger.model.IpAddress;
 
 
 /**
@@ -18,6 +21,9 @@ public class MainApp extends Application {
 	private Stage primaryStage;
 	private AnchorPane rootLayout;
 
+	private ObservableList<IpAddress> ipAddress = 
+			FXCollections.observableArrayList(); 
+		
 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
@@ -53,6 +59,16 @@ public class MainApp extends Application {
      */
     public Stage getPrimaryStage() {
         return primaryStage;
+    }
+    
+    
+    /**
+     * Returns the data as an observable list of IpAddress
+     *  
+     * @return ObservableList
+     */
+    public ObservableList<IpAddress> getIpAddressDate(){
+    	return ipAddress;
     }
     
 	public static void main(String[] args) {
