@@ -15,10 +15,7 @@ public class IpAddressOverviewController {
 	
 	@FXML
 	private TableColumn<IpAddress, String> placeColumn;
-	
-	@FXML
-	private Label placeLabel;
-	
+
 	@FXML
 	private Label ipAddressLabel;
 	
