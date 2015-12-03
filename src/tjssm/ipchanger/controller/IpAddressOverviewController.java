@@ -16,21 +16,7 @@ public class IpAddressOverviewController {
 	@FXML
 	private TableColumn<IpAddress, String> placeColumn;
 
-	@FXML
-	private Label ipAddressLabel;
-	
-	@FXML
-	private Label subnetMaskLabel;
-	
-	@FXML
-	private Label gatewayLabel;
-	
-	@FXML
-	private Label basicDNSLabel;
-	
-	@FXML
-	private Label subDNSLabel;
-	
+
 	//Reference to the main application
 	private MainApp mainApp;
 		
