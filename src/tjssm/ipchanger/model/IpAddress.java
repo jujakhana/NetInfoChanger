@@ -22,12 +22,12 @@ public class IpAddress {
 	 * Default constructor
 	 */
 	public IpAddress(){
-		this.place = new SimpleStringProperty(" ");
-		this.ipAddress = new SimpleStringProperty(" ");
-		this.subnetMask = new SimpleStringProperty(" ");
-		this.gateway = new SimpleStringProperty(" ");
-		this.basicDNS = new SimpleStringProperty(" ");
-		this.subDNS = new SimpleStringProperty(" ");
+		this.place = new SimpleStringProperty("");
+		this.ipAddress = new SimpleStringProperty("");
+		this.subnetMask = new SimpleStringProperty("");
+		this.gateway = new SimpleStringProperty("");
+		this.basicDNS = new SimpleStringProperty("");
+		this.subDNS = new SimpleStringProperty("");
 	}
 	
 	public String getPlace(){
